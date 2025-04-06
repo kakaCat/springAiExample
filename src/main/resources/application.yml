@@ -1,0 +1,15 @@
+#spring.application.name=mcp
+#
+## ?????????
+#spring.main.banner-mode=off
+#logging.pattern.console=
+spring:
+  main:
+    web-application-type: none  # ????web????
+    banner-mode: off           # ??banner
+  ai:
+    mcp:
+      server:
+        stdio: true            # ??stdio??
+        name: my-weather-server # ?????
+        version: 0.0.1         # ?????
