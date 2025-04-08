@@ -3,8 +3,6 @@ server:
 spring:
   application:
     name: mcp-stdio-client
-#  main:
-#    web-application-type: none
   ai:
     openai:
       api-key: sk-ef6659ca30264acca334ff343eca6695
@@ -16,20 +14,21 @@ spring:
           enabled: false
     mcp:
       client:
+        enabled: true                               # 开启服务端 默认true
+        name: client                                # MCP 客户端实例的名称
+        version: 0.0.1                              # MCP 客户端实例版本
+        initialized: true                           # 是否在创建时初始化客户端 默认true
+        request-timeout: 20s                        # MCP 客户端请求的超时时间
+        type: SYNC                                  # 客户端类型 默认SYNC SYNC/ASYNC
+        root-change-notification: true              # 为所有客户端启用/禁用根更改通知 默认true
+        toolcallback:
+          enabled: true                             # 启用/禁用 MCP 工具回调与 Spring AI 工具执行框架的集成 默认true
         stdio:
           servers-configuration: classpath:/mcp-servers-config.json
-#          stdio: true
-#          stdio-path: /Users/mac/Documents/github/ai/springAiExample/stdio-server/target/stdio-server-0.0.1-SNAPSHOT.jar
-
-
-          # 直接配置
-#          connections:
-#            weather:
-#              command: java
-#              args:
-#                - -jar
-#                - /Users/mac/Documents/github/ai/springAiExample/stdio-server/target/stdio-server-0.0.1-SNAPSHOT.jar  # 放一个绝对路径，修改为server jar包所在位置
-#mandatory-file-encoding: UTF-8
+        ## 配置 stdio 连接
+#        connections:                                # 命名的 stdio 连接配置图
+#          server1:                                  # 服务
+#            command:                                # “java”
 
 # 调试日志
 logging:

@@ -1,0 +1,15 @@
+server:
+  port: 18080
+
+spring:
+  application:
+    name: chat-anthropic
+  ai:
+    anthropic:
+      api-key: sk-ef6659ca30264acca334ff343eca6695
+      base-url: https://api.deepseek.com
+      chat:
+        options:
+          model: deepseek-chat
+      embedding:
+        enabled: false

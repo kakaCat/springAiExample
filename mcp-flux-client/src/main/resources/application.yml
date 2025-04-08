@@ -21,6 +21,15 @@ spring:
           temperature: 0.7
     mcp:
       client:
+        enabled: true                               # 开启服务端 默认true
+        name: client                                # MCP 客户端实例的名称
+        version: 0.0.1                              # MCP 客户端实例版本
+        initialized: true                           # 是否在创建时初始化客户端 默认true
+        request-timeout: 20s                        # MCP 客户端请求的超时时间
+        type: SYNC                                  # 客户端类型 默认SYNC SYNC/ASYNC
+        root-change-notification: true              # 为所有客户端启用/禁用根更改通知 默认true
+        toolcallback:
+          enabled: false                            # 启用/禁用 MCP 工具回调与 Spring AI 工具执行框架的集成 默认false
         sse:
           connections:
             server1:

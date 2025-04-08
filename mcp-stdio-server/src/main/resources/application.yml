@@ -8,9 +8,15 @@ spring:
   ai:
     mcp:
       server:
-        stdio: true
-        name: my-weather-server
-        version: 0.0.1
+        enabled: true                               # 开启服务端 默认true
+        stdio: true                                 # 开启stdio服务端 默认false
+        name: my-weather-server                     # mcp服务端名称
+        version: 0.0.1                              # mcp服务端版本
+        type: SYNC                                  # mcp服务端类型 默认SYNC SYNC/ASYNC
+        resource-change-notification: true          # 启用资源更改通知 默认true
+        prompt-change-notification: true            # 启用提示更改通知 默认true
+        tool-change-notification: true              # 启用工具更改通知 默认true
+        sse-message-endpoint: /mcp/messages         # Web 传输的 SSE 端点路径 默认/mcp/messages
 # 服务端配置
 logging:
   level:

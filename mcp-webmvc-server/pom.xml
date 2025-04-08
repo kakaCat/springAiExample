@@ -9,10 +9,10 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>mcp-flux-server</artifactId>
+    <artifactId>mcp-webmvc-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>mcp-flux-server</name>
+    <name>mcp-webmvc-server</name>
     <description>Sample Spring Boot application demonstrating MCP client and server usage</description>
 
     <properties>
@@ -22,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-mcp-server-webflux-spring-boot-starter</artifactId>
+            <artifactId>spring-ai-mcp-server-webmvc-spring-boot-starter</artifactId>
             <version>${spring-ai.version}</version>
         </dependency>
 
