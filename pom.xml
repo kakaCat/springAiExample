@@ -40,10 +40,10 @@
     <modules>
         <module>chat-anthropic</module>
         <module>chat-openai</module>
-        <module>mcp-flux-client</module>
-        <module>mcp-flux-server</module>
         <module>mcp-stdio-client</module>
         <module>mcp-stdio-server</module>
+        <module>mcp-web-client</module>
+        <module>mcp-webflux-server</module>
         <module>mcp-webmvc-server</module>
 
     </modules>

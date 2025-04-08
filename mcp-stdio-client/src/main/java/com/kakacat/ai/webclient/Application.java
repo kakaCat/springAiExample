@@ -1,4 +1,4 @@
-package com.kakacat.ai.fluxclient;
+package com.kakacat.ai.webclient;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.tool.ToolCallbackProvider;
@@ -8,17 +8,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-
-@SpringBootApplication(exclude = {
-        org.springframework.ai.autoconfigure.mcp.client.SseHttpClientTransportAutoConfiguration.class
-})
-public class FluxClientApplication {
-
+@SpringBootApplication
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(FluxClientApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
+    // 直接硬编码中文问题，避免配置文件编码问题
     private String userInput = "北京的天气如何？";
 
     @Bean

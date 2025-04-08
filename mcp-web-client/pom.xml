@@ -9,10 +9,10 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>mcp-flux-client</artifactId>
+    <artifactId>mcp-web-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>mcp-flux-client</name>
+    <name>mcp-web-client</name>
     <description>Sample Spring Boot application demonstrating MCP stdio server usage</description>
 
     <properties>

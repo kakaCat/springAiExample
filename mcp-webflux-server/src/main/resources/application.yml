@@ -7,7 +7,7 @@ spring:
     mcp:
       server:
         enabled: true                               # 开启服务端 默认true
-        stdio: true                                 # 开启stdio服务端 默认false
+        stdio: false                                # 开启stdio服务端 默认false
         name: my-weather-server                     # mcp服务端名称
         version: 0.0.1                              # mcp服务端版本
         type: SYNC                                  # mcp服务端类型 默认SYNC SYNC/ASYNC
