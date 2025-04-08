@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: mcp-flux-server
+  main:
+    banner-mode: off
+  ai:
+    mcp:
+      server:
+        name: my-weather-server
+        version: 0.0.1

@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "weather": {
+            "command": "java",
+            "args": [
+                "-jar",
+                "/Users/mac/Documents/github/ai/springAiExample/mcp-stdio-server/target/mcp-stdio-server-0.0.1-SNAPSHOT.jar"            ],
+            "env": {}
+        }
+    }
+}

@@ -1,0 +1,47 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: mcp-stdio-client
+#  main:
+#    web-application-type: none
+  ai:
+    openai:
+      api-key: sk-ef6659ca30264acca334ff343eca6695
+      base-url: https://api.deepseek.com
+      chat:
+        options:
+          model: deepseek-chat
+      embedding:
+          enabled: false
+    mcp:
+      client:
+        stdio:
+          servers-configuration: classpath:/mcp-servers-config.json
+#          stdio: true
+#          stdio-path: /Users/mac/Documents/github/ai/springAiExample/stdio-server/target/stdio-server-0.0.1-SNAPSHOT.jar
+
+
+          # 直接配置
+#          connections:
+#            weather:
+#              command: java
+#              args:
+#                - -jar
+#                - /Users/mac/Documents/github/ai/springAiExample/stdio-server/target/stdio-server-0.0.1-SNAPSHOT.jar  # 放一个绝对路径，修改为server jar包所在位置
+#mandatory-file-encoding: UTF-8
+
+# 调试日志
+logging:
+  level:
+    io:
+      modelcontextprotocol:
+        client: DEBUG
+        spec: DEBUG
+
+#server:
+#  servlet:
+#    encoding:
+#      charset: UTF-8
+#      enabled: true
+#      force: true

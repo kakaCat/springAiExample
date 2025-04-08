@@ -1,0 +1,19 @@
+spring:
+  output:
+    ansi:
+      enabled: never
+  main:
+    web-application-type: none
+    banner-mode: off
+  ai:
+    mcp:
+      server:
+        stdio: true
+        name: my-weather-server
+        version: 0.0.1
+# 服务端配置
+logging:
+  level:
+    root: OFF  # 关闭所有日志输出到控制台
+  file:
+    name: server.log  # 将日志重定向到文件
